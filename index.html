@@ -4,20 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        /* Color Palette */
+        :root {
+            --federal-blue-default: #03045e;
+            --federal-blue-100: #010113;
+            --federal-blue-200: #010226;
+            --federal-blue-300: #020338;
+            --federal-blue-400: #02044b;
+            --federal-blue-500: #03045e;
+            --federal-blue-600: #0508ae;
+            --federal-blue-700: #0f12f8;
+            --federal-blue-800: #5f61fa;
+            --federal-blue-900: #afb0fd;
+            --honolulu-blue-default: #0077b6;
+            --honolulu-blue-100: #001825;
+            --honolulu-blue-200: #003049;
+            --honolulu-blue-300: #00486e;
+            --honolulu-blue-400: #005f93;
+            --honolulu-blue-500: #0077b6;
+            --honolulu-blue-600: #00a2f9;
+            --honolulu-blue-700: #3bbaff;
+            --honolulu-blue-800: #7cd1ff;
+            --honolulu-blue-900: #bee8ff;
+            --pacific-cyan-default: #00b4d8;
+            --pacific-cyan-100: #00242b;
+            --pacific-cyan-200: #004756;
+            --pacific-cyan-300: #006b81;
+            --pacific-cyan-400: #008fab;
+            --pacific-cyan-500: #00b4d8;
+            --pacific-cyan-600: #12d8ff;
+            --pacific-cyan-700: #4ee1ff;
+            --pacific-cyan-800: #89ebff;
+            --pacific-cyan-900: #c4f5ff;
+            --non-photo-blue-default: #90e0ef;
+            --non-photo-blue-100: #0a3a43;
+            --non-photo-blue-200: #137586;
+            --non-photo-blue-300: #1dafc9;
+            --non-photo-blue-400: #4ccfe6;
+            --non-photo-blue-500: #90e0ef;
+            --non-photo-blue-600: #a6e7f2;
+            --non-photo-blue-700: #bcedf5;
+            --non-photo-blue-800: #d2f3f9;
+            --non-photo-blue-900: #e9f9fc;
+            --light-cyan-default: #caf0f8;
+            --light-cyan-100: #0a444f;
+            --light-cyan-200: #15889f;
+            --light-cyan-300: #2ac4e3;
+            --light-cyan-400: #79daee;
+            --light-cyan-500: #caf0f8;
+            --light-cyan-600: #d4f3f9;
+            --light-cyan-700: #dff6fb;
+            --light-cyan-800: #e9f9fc;
+            --light-cyan-900: #f4fcfe;
+        }
+
         body {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: #D9D7DD;
+            background: var(--light-cyan-500);
+            font-family: "Montserrat", sans-serif;
         }
 
         .clock {
             border-radius: 100%;
             background: #ffffff;
-            font-family: "Montserrat";
             border: 5px solid white;
             box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
         }
@@ -40,7 +93,7 @@
             left: 0;
             bottom: 0;
             right: 0;
-            background: black;
+            background: var(--honolulu-blue-500);
             transform-origin: bottom center;
             transform: rotate(0deg);
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
@@ -51,7 +104,7 @@
             height: 130px;
             width: 4px;
             top: -38%;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+            background: var(--pacific-cyan-500);
             transform: rotate(90deg);
         }
 
@@ -65,7 +118,7 @@
             bottom: 0;
             right: 0;
             border-radius: 4px;
-            background: #FF4B3E;
+            background: var(--federal-blue-500);
             transform-origin: bottom center;
             transform: rotate(180deg);
             z-index: 1;
@@ -80,9 +133,8 @@
             width: 12px;
             height: 12px;
             border-radius: 100px;
-            background: white;
-            border: 2px solid #1b1b1b;
-            border-radius: 100px;
+            background: var(--non-photo-blue-500);
+            border: 2px solid var(--federal-blue-700);
             margin: auto;
             z-index: 1;
         }
@@ -91,10 +143,10 @@
 <body>
     <div class="clock">
         <div class="wrap">
-          <span class="hour"></span>
-          <span class="minute"></span>
-          <span class="second"></span>
-          <span class="dot"></span>
+            <span class="hour"></span>
+            <span class="minute"></span>
+            <span class="second"></span>
+            <span class="dot"></span>
         </div>
     </div>
 
